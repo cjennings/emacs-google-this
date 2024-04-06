@@ -1,4 +1,4 @@
-;;; google-this.el --- A set of functions and bindings to google under point.
+;;; google-this.el --- A set of functions and bindings to Google under point -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2012-2013 Artur Malabarba <bruce.connor.am@gmail.com>
 
@@ -472,5 +472,4 @@ BEFORE activating the function `google-this-mode' and BEFORE `require'ing the
 ;; (setq google-this-keybind (kbd \"C-x g\"))
 
 (provide 'google-this)
-
 ;;; google-this.el ends here
