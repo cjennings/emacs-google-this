@@ -60,7 +60,7 @@
 
 ;;  Make sure "google-this.el" is in your load path, then place
 ;;      this code in your .emacs file:
-;;		(require 'google-this)
+;;      (require 'google-this)
 ;;              (google-this-mode 1)
 
 ;;; License:
@@ -409,8 +409,8 @@ PREFIX determines quoting."
       (unless (compilation-buffer-internal-p)
         (set-buffer buffer-name))
       (google-this-string prefix
-                     (google-this-clean-error-string
-                      (buffer-substring (line-beginning-position) (line-end-position)))))))
+                          (google-this-clean-error-string
+                           (buffer-substring (line-beginning-position) (line-end-position)))))))
 
 
 ;;;###autoload
@@ -465,7 +465,7 @@ BEFORE activating the function `google-this-mode' and BEFORE `require'ing the
   :package-version '(google-this . "1.8"))
 
 ;;;###autoload
-(define-minor-mode google-this-mode nil nil google-this-modeline-indicator
+(define-minor-mode google-this-mode nil :init-value nil :lighter google-this-modeline-indicator
   `((,google-this-keybind . ,google-this-mode-submap))
   :global t
   :group 'google-this)
