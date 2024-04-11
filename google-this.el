@@ -102,7 +102,8 @@ opposite happens."
   :group 'google-this)
 
 (defcustom google-this-suspend-after-search nil
-  "Whether Emacs should be minimized after a search is launched (calls `suspend-frame')."
+  "Whether Emacs should be minimized after a search is launched.
+Calls `suspend-frame'."
   :type 'boolean
   :group 'google-this)
 
@@ -134,7 +135,10 @@ Possible values include: `browse-url', `browse-url-generic',
 (define-key google-this-mode-submap "c" #'google-this-translate-query-or-region)
 
 (defun google-this-translate-query-or-region ()
-  "If region is active `google-translate-at-point', otherwise `google-translate-query-translate'."
+  "Chooses translate pont or query.
+If region is active `google-translate-at-point', otherwise
+`google-translate-query-translate'."
+
   (interactive)
   (unless (require 'google-translate nil t)
     (error "[google-this]: This command requires the 'google-translate' package"))
@@ -160,7 +164,7 @@ shouldn't include the final \"com\" here."
   :group 'google-this)
 
 (defun google-this-url ()
-  "URL for google searches."
+  "URL for Google searches."
   (concat google-this-base-url google-this-location-suffix "/search?ion=1&q=%s"))
 
 (defcustom google-this-error-regexp '(("^[^:]*:[0-9 ]*:\\([0-9 ]*:\\)? *" ""))
@@ -182,7 +186,7 @@ PREFIX determines quoting."
 
 ;;;###autoload
 (defun google-this-search (prefix &optional search-string)
-  "Write and do a google search.
+  "Write and do a Google search.
 Interactively PREFIX determines quoting.
 Non-interactively SEARCH-STRING is the string to search."
   (interactive "P")
@@ -267,7 +271,7 @@ Non-Interactively:
         (setq google-this--last-url url)))
     (unless nint (deactivate-mark))
     (when nint
-      (while (null google-this--last-url) (sleep-for 0 10))
+      (while (null google-this--last-url) (sleep-for 0.1))
       google-this--last-url)))
 
 ;;;###autoload
