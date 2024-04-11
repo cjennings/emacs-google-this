@@ -1,5 +1,10 @@
-google-this [![Build Status](https://secure.travis-ci.org/Malabarba/emacs-google-this.png?branch=master)](http://travis-ci.org/Malabarba/emacs-google-this) [![Melpa](http://melpa.org/packages/google-this-badge.svg)](http://melpa.org/#/google-this) [![Melpa-stable](http://stable.melpa.org/packages/google-this-badge.svg)](http://melpa.org/#/google-this) [Gratipay](https://gratipay.com/Malabarba/)
+google-this
 ------------------------
+
+(this patch version includes:
+- fixed startup warning - use keywords not positional arguments
+- added google-this-maps and google-this-youtube
+- fixing compiler warnings
 
 **A set of emacs functions and bindings to google under point.**
 
